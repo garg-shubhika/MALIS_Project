@@ -1,0 +1,25 @@
+Flight Prices Prediction
+Motivation
+	
+You live far from EURECOM and want to fly home for the holidays. The problem is… you never know when to book to get the cheapest plane ticket. We intend to provide a solution for you through an application of machine learning. 
+
+It is a well-known fact that airlines use dynamic pricing and change ticket prices depending on several factors. In this project, we will attempt to build a model apt to predict flight prices by taking into account the number of days left until the flight. Thus, you will be able to fly home without breaking the bank.
+Machine learning techniques and intended experiments
+
+The problem we are working on is a regression problem, as the output value is the ticket price, a real value. We have found on Kaggle a dataset we can use (Flight Price Prediction | Kaggle). It has 300,152 entries that describe the characteristics of each flight - including the ticket price and the number of days left. It is important to note that the Kaggle dataset has already been preprocessed. Indeed, there are no mismatched or missing values. We will work with a clean dataset.
+
+Before beginning to build our model, we will divide our dataset into 3 different parts: 
+1. Training Dataset, used to train the model.
+2. Validation Dataset, a collection of instances used to fine-tune a classifier’s hyperparameters.
+3. Test Dataset, only used to test the final output of the model to confirm the accuracy.
+
+We are thinking of several machine learning techniques to solve this problem. At first glance, the easiest to implement would be linear regression. Intuitively, we can assume the price of the ticket would be less when we book early for the same flight and airline. To improve this model and prevent overfitting, we could take a look at ridge and lasso regression. A decision tree algorithm could also be envisioned to train the model. However, this method yields high variances and is often the cause of overfitting. To counter this, it would be wiser to use a random tree algorithm. Lastly, we could try the Bayesian method. In this method, the user picks a prior value stating the initial belief about the possible price. Then, whenever a new data point is entered into this algorithm, the initial belief shifts either higher or lower. 
+
+To measure our models’ performances, we will rely on various regression evaluation metrics:
+
+MAE- Calculate the absolute difference between the predictions made by the model and the real values.
+MSE- Calculate the squares of the difference between the predicted values and the actual values.
+RMSE- It constitutes the differences between the model predictions and the true values.
+Adjusted R-Squared- We use Adjusted R-squared to figure out how reliable the correlation is.
+
+To conclude, we will pick the most accurate model and try to improve it. For instance, we could consider other factors that have an influence over ticket prices.
